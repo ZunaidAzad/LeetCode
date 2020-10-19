@@ -1,0 +1,12 @@
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        counter = 0
+        a = max(nums)
+        for num in nums:
+            if num == a:
+                counter += 1
+        if counter > 1:
+            return (a-1) * (a-1)
+        else:
+            nums2 = nums.remove(a)
+            return ((a-1) * (max(nums)-1))
