@@ -1,0 +1,11 @@
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        salary.sort()
+        salary.remove(salary[0])
+        salary.pop()
+        total = 0
+        l = len(salary)
+        for i in range(l):
+            total += salary[i]
+        avg = total/l
+        return avg
