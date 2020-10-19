@@ -1,0 +1,18 @@
+class Solution:
+    def diagonalSum(self, mat: List[List[int]]) -> int:
+        d = {}
+        a = []
+        add = 0
+        if len(mat) % 2 == 0:
+            for i in range(len(mat)):
+                a.append(mat[i][i])
+                a.append(mat[-i-1][i])
+        else:
+            for i in range(len(mat)):
+                a.append(mat[i][i])
+            m = len(mat)
+            l = ((m-1)//2)
+            for i in range(l):
+                a.append(mat[-i-1][i])
+                a.append(mat[i][-i-1])
+        return sum(a)
