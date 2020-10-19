@@ -1,0 +1,19 @@
+class Solution:
+    def fib(self, N: int) -> int:
+        a = 1
+        b = 2
+        c = 0
+        if N > 3:
+            for i in range(N-3):
+                c = a + b
+                a = b
+                b = c
+            return c
+        elif N == 3:
+            return 2
+        elif N == 2:
+            return 1
+        elif N == 1:
+            return 1
+        elif N == 0:
+            return 0
