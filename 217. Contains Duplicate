@@ -1,0 +1,19 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        
+        dictionary = {}
+        
+        for i in range(len(nums)):
+            
+            n = nums[i]
+            if n in dictionary.keys():
+                dictionary[n] += 1
+            
+            else:
+                dictionary.update({n:1})
+        
+        for key, value in dictionary.items():
+            if value > 1:
+                return True
+        
+        return False
