@@ -1,0 +1,19 @@
+class Solution:
+    def isMonotonic(self, A: List[int]) -> bool:
+        if len(A) == 1:
+            return True
+        else:
+            for k in range(len(A) - 1):
+                if A[k] > A[k + 1]:
+                    for i in range(len(A) - 1):
+                        if A[i] < A[i + 1]:
+                            return False
+                    return True
+                elif A[k] < A[k + 1]:
+                    for i in range(len(A) - 1):
+                        if A[i] > A[i + 1]:
+                            return False
+                    return True
+                elif min(A) == max(A):
+                    return True
+                 
