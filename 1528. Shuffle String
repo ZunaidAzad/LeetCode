@@ -1,0 +1,12 @@
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        dictionary = {}
+        l = []
+        string = ''
+        for i in range(len(s)):
+            dictionary.update({indices[i]:s[i]})
+            l.append('')
+        for i in range(len(l)):
+            l[i] = dictionary[i]
+        word = string.join(l)
+        return word
