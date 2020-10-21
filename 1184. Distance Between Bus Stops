@@ -2,18 +2,13 @@ class Solution:
     def distanceBetweenBusStops(self, distance: List[int], start: int, destination: int) -> int:
         accum = 0
         accum2 = 0
-        print(start)
-        print(destination)
-        print(len(distance))
         if start < destination:
             for i in range(start,destination):
                 accum += distance[i]
-            print(accum)
             for k in range(destination, len(distance)):
                 accum2 += distance[k]
             for m in range(start):
                 accum2 += distance[m]
-            print(accum2)
             if accum < accum2:
                 return accum
             else:
@@ -21,12 +16,10 @@ class Solution:
         else:
             for i in range(destination, start):
                 accum += distance[i]
-            print(accum)
             for k in range(start, len(distance)):
                 accum2 += distance[k]
             for m in range(destination):
                 accum2 += distance[m]
-            print(accum2)
             if accum < accum2:
                 return accum
             else:
