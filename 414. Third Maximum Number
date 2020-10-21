@@ -6,11 +6,9 @@ class Solution:
             n = nums[i]
             if n not in dictionary:
                 dictionary.update({n:1})
-        print(dictionary)
         for key in dictionary.keys():
             array.append(key)
         array.sort()
-        print(array)
         if len(array) < 3:
             return array[-1]
         else:
