@@ -7,7 +7,6 @@ class Solution:
             else:
                 d.update({arr[i]:1})
         v = sorted(d.values())
-        print(v)
         for z in range(len(v)-1):
             if v[z] == v[z + 1]:
                 return False
