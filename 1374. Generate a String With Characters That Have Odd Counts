@@ -1,0 +1,14 @@
+class Solution:
+    def generateTheString(self, n: int) -> str:
+        s = ''
+        if n % 2 == 1:
+            for i in range(n):
+                s += 'a'
+        else:
+            for i in range(n):
+                s += 'a'
+            v = list(s)
+            v.pop()
+            s = ''.join(v)
+            s += 'b'
+        return s
